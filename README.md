@@ -30,4 +30,8 @@ As mentioned, the addresses of this system are also 8-bit. This means that the m
         
 Memory cells 0 to 31 are used for command memory and cells 32 to 63 are used for data memory.
 
+Our TestBench stores values at the end of the memory.
+
+<img src="Images/Images-3.jpg">
+
 
