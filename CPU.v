@@ -1,0 +1,57 @@
+module CPU(
+    clk,
+    inst,
+    reset,
+    address,
+    out_data,
+    store
+);
+    input clk;
+    input reset;
+    input [7:0] inst;
+    output [7:0] address;
+    output [7:0] out_data;
+    output store;
+
+    wire [7:0] ir_out;
+    IR ir (.clk(clk), .reset(reset), .ir_in(inst), .ir_out(ir_out));
+
+    wire [1:0] c_func;
+    wire c_jump;
+    wire c_store;
+    wire c_inc;
+    wire c_load;
+    wire c_reg_write;
+    wire ADD;
+    Controller controller(.opcode(ir_out[7:4]), 
+        .func(c_func), .jump(c_jump), .store(c_store), .inc(c_inc), .load(c_load) ,.reg_write(c_reg_write),.ADD(ADD));
+    
+    wire [7:0] alu_in1;
+    wire [7:0] alu_in2;
+    wire [7:0] alu_out;
+    ALU alu(.func(c_func), .in1(alu_in1), .in2(alu_in2), .alu_out(alu_out));
+
+    wire [7:0] selected_reg_write;
+    Mux2 reg_file_selector(.in1(alu_out) ,.in2({6'd0,ir_out[1:0]}), .sel(c_load) ,.out(selected_reg_write));
+
+    wire [7:0] R1_out;
+    wire [7:0] R2_out;
+    RegisterFile registerfile(.clk(clk), .reset(reset), .reg_write(c_reg_write), .in_write(selected_reg_write), 
+        .R1(ir_out[3:2]), .R2(ir_out[1:0]) ,.R1_out(R1_out),.R2_out(R2_out));
+    assign alu_in1 = R1_out;
+    assign alu_in2 = R2_out;
+
+    wire [7:0] selected_address;
+    wire [7:0] pc_out; 
+	
+    PC pc(clk, c_inc, reset, c_jump,selected_address,pc_out);
+
+    wire [7:0] added_address;
+    Adder adder (.in1(pc_out), .in2({4'd0,ir_out[3:0]}), .out(added_address));
+
+    Mux2 address_selector(.in1(pc_out) ,.in2(added_address),.sel(c_jump), .out(selected_address));
+
+    assign out_data = alu_out;
+    assign address = selected_address;
+    assign store = c_store;
+endmodule

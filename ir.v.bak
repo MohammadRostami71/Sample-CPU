@@ -1,0 +1,16 @@
+module ir(
+input	clk,
+input	reset,
+input	[7:0] ir_in,
+output	[7:0] ir_out
+);
+
+//reg [7:0] ir_in;
+//reg [7:0] ir_out;
+
+always @(posedge clk) 
+		if (reset)
+			ir_out = 8'b00000000;
+		else
+			ir_out s= ir_in;
+endmodule
