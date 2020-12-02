@@ -26,7 +26,7 @@ Application memory:
 
 As mentioned, the addresses of this system are also 8-bit. This means that the memory of this system has 64 8-bit cells. This memory can be a two-dimensional array of reg in Verillag language. To initialize this array, you can save the desired values ​​in a txt file and enter the desired values ​​in the array with the following command.
 
-              $readmemb("initial_memory.txt",memory_array);
+              $readmemb("initial_memory.txt",memory);
         
 Memory cells 0 to 31 are used for command memory and cells 32 to 63 are used for data memory.
 
