@@ -36,4 +36,4 @@ Our TestBench stores values at the end of the memory.
 
 This processor is simulated in Verillag hardware description language and in ModelSim SE version 10.5 
 
-TestBench report in file CodeCoverage.txt Is placed
+TestBench report in CodeCoverage.txt 
