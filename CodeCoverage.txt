@@ -1,0 +1,56 @@
+# Coverage Report by instance with details
+# 
+# Coverage Report Toggles BY INSTANCES
+# Toggle Coverage:
+#     Enabled Coverage            Active      Hits    Misses % Covered
+#     ----------------            ------      ----    ------ ---------
+#     Toggle Bins                     66         1        65       1.5
+# 
+# ================================Toggle Details================================
+# 
+# Toggle Coverage for ALL instances --
+# 
+#                                               Node      1H->0L      0L->1H  "Coverage"
+#                                               ---------------------------------------
+#                               /tb/uut/address_t[0]           0           0        0.00 
+#                               /tb/uut/address_t[1]           0           0        0.00 
+#                               /tb/uut/address_t[2]           0           0        0.00 
+#                               /tb/uut/address_t[3]           0           0        0.00 
+#                               /tb/uut/address_t[4]           0           0        0.00 
+#                               /tb/uut/address_t[5]           0           0        0.00 
+#                                        /tb/uut/clk           1           0       50.00 
+#                             /tb/uut/cpu_address[0]           0           0        0.00 
+#                             /tb/uut/cpu_address[1]           0           0        0.00 
+#                             /tb/uut/cpu_address[2]           0           0        0.00 
+#                             /tb/uut/cpu_address[3]           0           0        0.00 
+#                             /tb/uut/cpu_address[4]           0           0        0.00 
+#                             /tb/uut/cpu_address[5]           0           0        0.00 
+#                             /tb/uut/cpu_address[6]           0           0        0.00 
+#                             /tb/uut/cpu_address[7]           0           0        0.00 
+#                            /tb/uut/cpu_out_data[0]           0           0        0.00 
+#                            /tb/uut/cpu_out_data[1]           0           0        0.00 
+#                            /tb/uut/cpu_out_data[2]           0           0        0.00 
+#                            /tb/uut/cpu_out_data[3]           0           0        0.00 
+#                            /tb/uut/cpu_out_data[4]           0           0        0.00 
+#                            /tb/uut/cpu_out_data[5]           0           0        0.00 
+#                            /tb/uut/cpu_out_data[6]           0           0        0.00 
+#                            /tb/uut/cpu_out_data[7]           0           0        0.00 
+#                                    /tb/uut/inst[0]           0           0        0.00 
+#                                    /tb/uut/inst[1]           0           0        0.00 
+#                                    /tb/uut/inst[2]           0           0        0.00 
+#                                    /tb/uut/inst[3]           0           0        0.00 
+#                                    /tb/uut/inst[4]           0           0        0.00 
+#                                    /tb/uut/inst[5]           0           0        0.00 
+#                                    /tb/uut/inst[6]           0           0        0.00 
+#                                    /tb/uut/inst[7]           0           0        0.00 
+#                                  /tb/uut/mem_write           0           0        0.00 
+#                                      /tb/uut/reset           0           0        0.00 
+# 
+# Total Node Count     =         33 
+# Toggled Node Count   =          0 
+# Untoggled Node Count =         33 
+# 
+# Toggle Coverage      =        1.5% (1 of 66 bins)
+# 
+# 
+
