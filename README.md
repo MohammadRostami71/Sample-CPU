@@ -34,4 +34,6 @@ Our TestBench stores values at the end of the memory.
 
 <img src="Images/Images-3.jpg">
 
+This processor is simulated in Verillag hardware description language and in ModelSim SE version 10.5 
+
 
